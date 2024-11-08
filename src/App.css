@@ -1,0 +1,212 @@
+#root {
+  /* max-width: 1280px; */
+
+  padding: 2rem;
+  /* text-align: center; */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.piano {
+  height: 400px;
+  width: 600px;
+  animation-name: playAnimation; /* Name of the animation */
+  animation-duration: 2s; /* Duration of the animation */
+  animation-iteration-count: 1; /* Number of times the animation will run */
+  animation-fill-mode: forwards; /* Retain the last keyframe styles after the animation ends */
+}
+
+/* Define the keyframes for the animation */
+@keyframes playAnimation {
+  0% {
+      transform: scale(1); /* Start at original size */
+  }
+  50% {
+      transform: scale(1.1); /* Scale up */
+  }
+  100% {
+      transform: scale(1); /* Scale back to original size */
+  }
+}
+
+.bar {
+  position: relative;
+  display: inline-block;
+  width: 20px; 
+  height: 64px; /* 2 times 35px */
+  margin: 0 24px; /* 2 times 12px */
+  margin-bottom: 96px; /* 2 times 48px */
+  border-right: 2px solid wheat; /* 2 times 1px */
+}
+.debug .bar {
+  outline: 2px solid wheat; 
+}
+.bar.double,
+.bar.end {
+  border-left: 2px solid wheat; 
+}
+.bar.end {
+  float: right;
+  border-right-width: 8px; /* 2 times 4px */
+  margin-right: 0;
+}
+.staff {
+  font-size: 0;
+  background-image: linear-gradient(
+    180deg,
+    #999 0,
+    #999 2px, /* 2 times 1px */
+    transparent 2px,
+    transparent 16px, /* 2 times 8px */
+    #999 16px,
+    #999 18px, /* 2 times 9px */
+    transparent 18px,
+    transparent 32px, /* 2 times 16px */
+    #999 32px,
+    #999 34px, /* 2 times 17px */
+    transparent 34px,
+    transparent 48px, /* 2 times 24px */
+    #999 48px,
+    #999 50px, /* 2 times 25px */
+    transparent 50px,
+    transparent 64px, /* 2 times 32px */
+    #999 64px,
+    #999 66px, /* 2 times 33px */
+    transparent 66px
+  );
+  background-size: 100% 160px; /* 2 times 80px */
+}
+.staff.debug {
+  background-color: wheat;
+}
+.note {
+  position: relative;
+  display: inline-block;
+  width: 24px; /* 2 times 15px */
+  height: 64px; /* 2 times 35px */
+  margin: 0 24px; /* 2 times 12px */
+  margin-bottom: 96px; /* 2 times 48px */
+}
+.debug .note {
+  outline: 2px solid wheat; /* 2 times 1px */
+}
+.note::before {
+  height: 20px; /* 2 times 10px */
+  width: 20px; /* 2 times 12px */
+}
+.whole.note::before {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  border: 2px solid wheat; /* 2 times 1px */
+  border-left-width: 8px; /* 2 times 4px */
+  border-right-width: 8px; /* 2 times 4px */
+  border-radius: 50%;
+}
+.half.note::after,
+.quarter.note::after {
+  content: "";
+  height: 56px; /* 2 times 28px */
+  width: 2px; /* 2 times 1px */
+  background-color: wheat;
+  position: absolute;
+  top: -48px; /* 2 times -24px */
+  right: 0;
+}
+.half.note::before,
+.quarter.note::before {
+  position: absolute;
+  content: "";
+  transform: rotatez(-15deg);
+  border-radius: 50%;
+}
+.half.note::before {
+  box-sizing: border-box;
+  border: 2px solid wheat; /* 2 times 1px */
+  border-top-width: 4.36363636px; /* 2 times 2.18181818px */
+  border-bottom-width: 4.36363636px; /* 2 times 2.18181818px */
+}
+.quarter.note::before {
+  background-color: wheat;
+}
+.note.d4 {
+  top: 64px; /* 2 times 32px */
+}
+.note.e4 {
+  top: 56px; /* 2 times 28px */
+}
+.note.f4 {
+  top: 48px; /* 2 times 24px */
+}
+.note.g4 {
+  top: 40px; /* 2 times 20px */
+}
+.note.a5 {
+  top: 32px; /* 2 times 16px */
+}
+.note.b5 {
+  top: 24px; /* 2 times 12px */
+}
+.note.c5 {
+  top: 16px; /* 2 times 8px */
+}
+.note.d5 {
+  top: 8px; /* 2 times 4px */
+}
+.note.e5 {
+  top: 0px;
+}
+.note.f5 {
+  top: -8px; /* 2 times -4px */
+}
+.note.g5 {
+  top: -16px; /* 2 times -8px */
+}
+.quarter.note.d5::after,
+.half.note.d5::after,
+.quarter.note.e5::after,
+.half.note.e5::after,
+.quarter.note.f5::after,
+.half.note.f5::after,
+.quarter.note.g5::after,
+.half.note.g5::after {
+  top: 8px; /* 2 times 4px */
+}
+
+
+
+

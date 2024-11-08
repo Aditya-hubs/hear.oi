@@ -1,0 +1,45 @@
+.box,.box2{
+	transition:all 0.05s ease-in-out;
+}
+.box{
+  width:500px; height:100px;  
+  border:solid 5px white;
+  border-color:white transparent transparent transparent;
+  border-radius: 50%/100px 100px 0 0;
+}
+
+.box2 {
+   width: 500px;
+   height: 100px;
+   border: solid 5px white;
+  border-color: transparent transparent white transparent;
+  border-radius: 0 0 240px 50%/60px;
+}
+
+
+.ast-2 {
+  width: 300px; /* Set your desired width */
+  height: 300px; /* Set your desired height */
+  background-color: transparent; /* Change color as needed */
+  margin-right: 100px;
+  margin-left: 0;
+}
+
+.ast-1 {
+  width: 300px; /* Set your desired width */
+  height: 300px; /* Set your desired height */
+  margin-left: 100px;
+  background-color: transparent; /* Change color as needed */
+}
+.flex {
+  background-color: transparent; /* Ensure the flex container is transparent */
+}
+
+.image-blurred-edge {
+  background-image: url('https://picsum.photos/200/300');
+  width: 300px;
+  height: 300px;
+  /* you need to match the shadow color to your background or image border for the desired effect*/
+  box-shadow: 0 0 8px 8px black inset;
+}
+
